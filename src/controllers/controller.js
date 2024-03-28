@@ -13,7 +13,8 @@ export default class ControllerExercicio {
         
         res.status(200).json({ resultado: result });
       } catch (error) {
-        res.status(500).json({ message: "Erro ao somar"});
+        console.error(error);
+        res.status(500).json({ message: error.message});
       }
     }
     Subtrair(req, res){
@@ -25,7 +26,8 @@ export default class ControllerExercicio {
         
         res.status(200).json({ resultado: result});
       } catch (error) {
-        res.status(500).json({ message: "Erro ao Subtrair"});
+        console.error(error);
+        res.status(500).json({ message: error.message});
       }
     }
     Dividir(req, res){
@@ -37,7 +39,8 @@ export default class ControllerExercicio {
         
         res.status(200).json({ resultado: result });
       } catch (error) {
-        res.status(500).json({ message: "Erro ao Dividir"});
+        console.error(error);
+        res.status(500).json({ message: error.message});
       }
     }
     Multiplicar(req, res){
@@ -49,7 +52,8 @@ export default class ControllerExercicio {
         
         res.status(200).json({ resultado: result });
       } catch (error) {
-        res.status(500).json({ message: "Erro ao Multiplicar"});
+        console.error(error);
+        res.status(500).json({ message: error.message});
       }
     }
 
